@@ -1,6 +1,6 @@
 <template>
   <div id="tree-view">
-    <collapsible-tree v-model="selection" :structure="treeStructure" />
+    <collapsible-tree v-model="selection" :structure="treeStructure"/>
   </div>
 </template>
 

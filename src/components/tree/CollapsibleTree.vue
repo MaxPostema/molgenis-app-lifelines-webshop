@@ -61,11 +61,6 @@ import BlockExpand from '../animations/BlockExpand.vue'
 
 export default Vue.extend({
   name: 'CollapsibleTree',
-  data: function () {
-    return {
-      collapsed: ''
-    }
-  },
   props: {
     value: {
       type: Number,
@@ -79,6 +74,14 @@ export default Vue.extend({
   computed: {
     hasChildren () {
       return parent => !!parent.children && parent.children.length > 0
+    },
+    collapsed: {
+      get () {
+        return this.$store.state.treeOpenSection
+      },
+      set (value) {
+        this.$store.commit('updateTreeOpenSection', value)
+      }
     }
   },
   methods: {
