@@ -29,6 +29,9 @@ const mockResponses: { [key: string]: Object } = {
   '/api/v2/lifelines_order/fghij': {
     contents: cartContents
   },
+  '/api/v2/lifelines_order/12345': {
+    contents: cartContents
+  },
   '/api/v2/lifelines_section?num=10000': {
     items: [
       { id: 1, name: 'section1' },
